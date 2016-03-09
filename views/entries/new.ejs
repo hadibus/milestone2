@@ -1,14 +1,13 @@
-<%include ../head %>
+<% include ../head %>
 
-<!-- GET POST PUT DELETE -->
-<form action="/entries/create" method='POST'>
+<form action="/entries/" method='POST'>
   <label name="slug">Slug</label>
-  <input class="form-control" type="text" name="slug">
+  <input type="text" name="slug">
   <br />
   <label name="body">Body</label>
-  <input class="form-control" type="text" name="body">
+  <input type="text" name="body">
   <br />
   <input type="submit">
 </form>
 
-<%include ../footer %>
+<% include ../footer %>
