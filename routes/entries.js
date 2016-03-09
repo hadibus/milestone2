@@ -8,18 +8,18 @@ var entries = [
 
 /* READ all: GET entries listing. */
 router.get('/', function(req, res, next) {
-  res.render('entries/index', { title: 'Blog', entries: entries });
+  res.render('entries/index', { title: 'Today I Learned', entries: entries });
 });
 
 /* CREATE entry form: GET /entries/new */
 router.get('/new', function(req, res, next) {
-  res.render('entries/new', {title: "Create new entry"});
+  res.render('entries/new', {title: "Post new TIL"});
 });
 
 /*CREATE entry: POST /entries/ */
 router.post('/', function(req, res, next) {
   entries.push(req.body);
-  res.render('entries/index', { title: 'Blog', entries: entries });
+  res.render('entries/index', { title: 'Today I Learned', entries: entries });
 });
 
 /* UPDATE entry form: GET /entries/1/edit */
